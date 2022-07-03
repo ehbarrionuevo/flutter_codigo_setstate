@@ -33,7 +33,7 @@ class _StatusGeneralPageState extends State<StatusGeneralPage> {
                 ),
               ),
               child: Text(
-                "Flutter Developer",
+                "Flutter Developer ",
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: 20.0,
