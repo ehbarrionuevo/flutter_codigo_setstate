@@ -9,6 +9,8 @@ class _StatusGeneralPageState extends State<StatusGeneralPage> {
   bool isFontWeight = false;
   bool isTextDecoration = false;
 
+  double valueSliderRed = 100;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -24,7 +26,8 @@ class _StatusGeneralPageState extends State<StatusGeneralPage> {
               width: double.infinity,
               alignment: Alignment.center,
               decoration: BoxDecoration(
-                color: Color(0xfff72585),
+                // color: Color(0xfff72585),
+                color: Color.fromRGBO(valueSliderRed.toInt(), 22, 89, 1),
                 borderRadius: BorderRadius.circular(
                   12.0,
                 ),
@@ -66,6 +69,15 @@ class _StatusGeneralPageState extends State<StatusGeneralPage> {
                 fontSize: 15.0,
               ),
             ),
+            const SizedBox(
+              height: 10.0,
+            ),
+            Text(
+              "Mostrar todo",
+              style: TextStyle(
+                color: Colors.blue,
+              ),
+            ),
             const Divider(),
             const SizedBox(
               height: 14.0,
@@ -95,6 +107,16 @@ class _StatusGeneralPageState extends State<StatusGeneralPage> {
               title: Text(
                 "Cambiar TextDecoration:: $isFontWeight",
               ),
+            ),
+
+            Slider(
+              value: valueSliderRed,
+              min: 0,
+              max: 255,
+              onChanged: (double value) {
+                valueSliderRed = value;
+                setState(() {});
+              },
             ),
           ],
         ),
