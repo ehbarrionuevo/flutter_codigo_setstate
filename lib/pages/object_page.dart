@@ -40,9 +40,10 @@ class _ObjectPageState extends State<ObjectPage> {
             const SizedBox(
               height: 20.0,
             ),
-            Column(
-              children: miLista,
-            ),
+            ...miLista,
+            // Column(
+            //   children: miLista,
+            // ),
           ],
         ),
       ),
