@@ -84,38 +84,42 @@ class _HomePageState extends State<HomePage> {
               ],
             ),
           ),
-          // SizedBox(
-          //   width: double.infinity,
-          //   height: 70.0,
-          //   child: ElevatedButton(
-          //     onPressed: () {
-          //       print("Hola");
-          //     },
-          //     child: Text(
-          //       "Calcular",
-          //     ),
-          //   ),
-          // ),
-
-          Container(
-            margin: const EdgeInsets.symmetric(
-              horizontal: 12.0,
-              vertical: 8.0,
-            ),
+          SizedBox(
             width: double.infinity,
-            height: 80.0,
-            decoration: BoxDecoration(
-              color: Colors.pinkAccent,
-              borderRadius: BorderRadius.circular(12.0),
+            height: 70.0,
+            child: ElevatedButton(
+              onPressed: () {
+                print("Hola");
+              },
+              child: Text(
+                "Calcular",
+              ),
             ),
-            alignment: Alignment.center,
-            child: const Text(
-              "CALCULAR",
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 30.0,
-                fontWeight: FontWeight.bold,
-                letterSpacing: 1.7,
+          ),
+          GestureDetector(
+            onTap: () {
+              print("Calculando...");
+            },
+            child: Container(
+              margin: const EdgeInsets.symmetric(
+                horizontal: 12.0,
+                vertical: 8.0,
+              ),
+              width: double.infinity,
+              height: 80.0,
+              decoration: BoxDecoration(
+                color: Colors.pinkAccent,
+                borderRadius: BorderRadius.circular(12.0),
+              ),
+              alignment: Alignment.center,
+              child: const Text(
+                "CALCULAR",
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 30.0,
+                  fontWeight: FontWeight.bold,
+                  letterSpacing: 1.7,
+                ),
               ),
             ),
           ),
